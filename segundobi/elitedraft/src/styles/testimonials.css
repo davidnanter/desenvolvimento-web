@@ -1,0 +1,125 @@
+#testimonials {
+  min-height: 100vh;
+  background: #04121f;
+  display: flex;
+  flex-direction: column;
+  padding-block: 6rem 4rem;
+  gap: 4rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 3;
+}
+
+#testimonials header {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-inline: 2rem;
+  align-items: center;
+}
+
+#testimonials header span :first-child {
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
+}
+
+#testimonials header h2 {
+  color: #FFFFFF;
+}
+
+#testimonials p {
+  color: #94a3b8;
+}
+
+.carousel {
+  display: flex;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.carousel:hover .carousel-content {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.carousel-content {
+  display: flex;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+  animation: swipe 30000ms linear infinite;
+}
+
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 18rem;
+  background: #0f2b45;
+  border-radius: 0.5rem;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  gap: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.carousel-card > img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.testimony p {
+  color: #FFFFFF !important;
+  font-size: var(--fs-base);
+  line-height: 1.6;
+}
+
+.rating {
+  display: flex;
+  margin-top: auto;
+  gap: 4px;
+}
+
+.rating img {
+  width: 22px;
+  height: 20px;
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.names :first-child {
+  color: #FFFFFF !important;
+  font-size: 1.1rem;
+  font-weight: var(--fw-bold);
+}
+
+.names :last-child {
+  color: var(--primary-color) !important;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-md);
+}
+
+@keyframes swipe {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@media (width >= 1280px) {
+  #testimonials {
+    gap: 5rem;
+    align-items: center;
+  }
+  .carousel { width: 85%; }
+  .carousel-card {
+    min-width: 24rem;
+    min-height: 26.875rem;
+  }
+}

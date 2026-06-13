@@ -1,0 +1,142 @@
+#pricing {
+  display: flex;
+  flex-direction: column;
+  padding-block: 4rem;
+  gap: 2rem;
+  background-color: #FFFFFF; 
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+#pricing header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+#pricing header p {
+  color: var(--primary-color);
+  font-weight: var(--fw-bold);
+}
+
+#pricing header h2 {
+  color: #04121f; 
+}
+
+#pricing .pricing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-self: center;
+  height: min-content;
+  padding: 1.5rem 1.5rem 3rem 1.5rem;
+  background-color: #0c1a24; 
+  border-radius: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 12px 30px;
+}
+
+#pricing .hr {
+  height: 1.5px;
+  background-color: var(--primary-color);
+  margin-block: 0.725rem;
+}
+
+#pricing .features {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+#pricing .features p {
+  color: #f1f5f9; 
+  font-size: var(--fs-sm);
+}
+
+#pricing .plan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#pricing .plan h3 {
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: #FFFFFF;
+}
+
+#pricing .plan p {
+  color: #94a3b8;
+}
+
+#pricing .premium {
+  border: solid 0.2rem var(--primary-color);
+  padding: 0rem 1.5rem 3rem 1.5rem;
+  background-color: #09151e; 
+}
+
+#pricing .premium .plan > h3 {
+  color: var(--primary-color);
+}
+
+#pricing .bonus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  width: 65%;
+  height: 2.5rem;
+  align-self: center;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+#pricing .bonus p {
+  font-size: 12px;
+  font-weight: var(--fw-md);
+  color: var(--light-text-color);
+  text-transform: uppercase;
+}
+
+#pricing .price {
+  display: flex;
+  align-items: end;
+}
+
+#pricing .price h2 {
+  font-size: 2rem;
+  color: #FFFFFF;
+}
+
+#pricing .price p {
+  margin-left: 8px;
+  padding-bottom: 4px;
+  color: #94a3b8;
+}
+
+@media (width >= 1280px) {
+  #pricing {
+    gap: 4rem;
+    padding-block: 6rem;
+  }
+
+  #pricing .even-columns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  #pricing .pricing-card {
+    width: 350px;
+    align-self: auto;
+  }
+
+  #pricing h3 {
+    font-size: 1.25rem;
+  }
+}
