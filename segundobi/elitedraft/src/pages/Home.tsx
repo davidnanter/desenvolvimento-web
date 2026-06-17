@@ -36,15 +36,10 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch("https://transcendent-chimera-72eff8.netlify.app/.netlify/functions/send-email", {
+      const response = await fetch("//.netlify/functions/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-          email, 
-          message,
-          smtpUser: "myrtice.lueilwitz@ethereal.email",
-          smtpPass: "PqKgHvQvgDnVq8BYS2"
-        }),
+        body: JSON.stringify({ email, message }),
       });
 
       const data = await response.json().catch(() => ({}));
