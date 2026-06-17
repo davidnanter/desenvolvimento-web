@@ -36,7 +36,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch("//.netlify/functions/send-email", {
+      const response = await fetch("/.netlify/functions/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, message }),
@@ -139,7 +139,7 @@ export default function Home() {
             <p>Inovação é com a gente! A <strong>EliteDraft</strong> já protegeu diversos sistemas.</p>
           </header>
           <div className="even-columns">
-            <SolutionCard image={Champion} title="Produto Vencedor" description="Ideia matadora, nosso time já ganhou diversos eventos." />
+            <SolutionCard image={Champion} title="Produto Vencedor" description="Ideia matadora, nosso time já ganhou diversos events." />
             <SolutionCard image={Champion} title="Segurança Elite" description="Proteção avançada para seus dados e sistemas." />
             <SolutionCard image={Champion} title="Design Premium" description="Interfaces modernas focadas na experiência do usuário." />
           </div>
