@@ -36,7 +36,8 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8888/api/send-email", {
+     
+      const response = await fetch("/.netlify/functions/send-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, message }),
